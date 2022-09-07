@@ -1,0 +1,12 @@
+.app {
+	display: grid;
+	margin: 5px;
+	grid-template-rows: 20% 80%;
+	align-items: flex-end;
+}
+
+.search-bar {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+}

@@ -1,0 +1,25 @@
+.search-container {
+	flex: 1;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 5px;
+}
+
+.suggestion-container {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.input {
+	flex: 1;
+	border: 1px solid black;
+	padding: 3px;
+}
+
+.svg {
+	cursor: pointer;
+	margin-left: 10px;
+}
