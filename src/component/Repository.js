@@ -10,12 +10,10 @@ const Repository = () => {
 	const { state } = useContext(ContextWrapper);
 	const [isOpen, setIsOpen] = useState(false);
 	const [data, setData] = useState([]);
-	console.log(data);
 	const handleClose = (repo) => {
 		setData(repo);
 		setIsOpen((prev) => !prev);
 	};
-	console.log(state.repository);
 	return (
 		<div className="container">
 			<table>

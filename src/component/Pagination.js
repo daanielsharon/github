@@ -7,7 +7,6 @@ const Pagination = () => {
 	const { state, setState } = useContext(ContextWrapper);
 	const pageChange = ({ selected }) => {
 		setState({ ...state, page: selected + 1 });
-		console.log(selected);
 	};
 	return (
 		<>

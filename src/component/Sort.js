@@ -4,7 +4,6 @@ import '../Style/sort.css';
 
 const Sort = () => {
 	const { state, setState } = useContext(ContextWrapper);
-	console.log(state.limit);
 	return (
 		<div className="sort-container">
 			<div className="text">Tampilkan: </div>
