@@ -35,6 +35,7 @@ const Repository = () => {
 								<td>{repo.name}</td>
 								<td>{repo.language ? repo.language : '-'}</td>
 								<td
+									className="last"
 									onClick={() => {
 										handleClose(repo);
 									}}

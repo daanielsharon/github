@@ -19,7 +19,7 @@ const RepositoryDetail = ({ data }) => {
 					<tr>
 						<td>{data.id}</td>
 						<td>{data.name}</td>
-						<td>{data.language}</td>
+						<td>{data.language ? data.language : '-'}</td>
 						<td>{data.description ? data.description : '-'}</td>
 						<td>{normalizeDate(data.created_at)}</td>
 						<td>{normalizeDate(data.updated_at)}</td>

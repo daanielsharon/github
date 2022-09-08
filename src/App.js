@@ -18,29 +18,30 @@ function App() {
 	});
 
 	useEffect(() => {
-		setTimeout(() => {
+		const delay = setTimeout(() => {
 			fetchSuggestions();
 		}, 500);
 		fetchRepo();
+		return () => clearTimeout(delay);
 		// eslint-disable-next-line
 	}, [state.query, state.fetch, state.limit, state.page]);
 
 	const fetchSuggestions = async () => {
-		if (state.fetch) {
+		if (state.fetch && state.query.length > 0) {
 			const response = await http.get(`/search/users?q=${state.query}`);
-			// 30 nilai default row github API
-			const totalPage = Math.ceil(30 / state.limit);
 			const fiveUser = (data) => {
 				return data.splice(0, 5);
 			};
-			setState({ ...state, totalPage: totalPage, suggestions: fiveUser(response.data.items) });
+			setState({ ...state, suggestions: fiveUser(response.data.items) });
 		}
 	};
 
 	const fetchRepo = async () => {
 		if (!state.fetch) {
 			const response = await http.get(`/users/${state.query}/repos?per_page=${state.limit}&page=${state.page}`);
-			setState({ ...state, repository: response.data });
+			const repoNumber = await http.get(`/users/${state.query}`);
+			const totalPage = Math.ceil(Math.min(30, repoNumber.data.public_repos) / state.limit);
+			setState({ ...state, repository: response.data, totalPage: totalPage });
 		}
 	};
 

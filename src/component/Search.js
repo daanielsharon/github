@@ -13,7 +13,7 @@ const Search = () => {
 	return (
 		<div className="search-container">
 			<div className="suggestion-container">
-				<input value={state.query} onChange={sendQuery} className="input"></input>
+				<input placeholder="type github username" value={state.query} onChange={sendQuery} className="input"></input>
 				<UserData />
 			</div>
 
