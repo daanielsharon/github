@@ -11,7 +11,7 @@ const RepositoryDetail = ({ data }) => {
 						<th>Bahasa Pemrograman</th>
 						<th>Deskripsi</th>
 						<th>Tanggal dibuat</th>
-						<th>Tanggal diperbarui</th>
+						<th>Terakhir diperbarui</th>
 					</tr>
 				</thead>
 				<tbody>
