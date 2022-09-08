@@ -1,7 +1,7 @@
 .app {
 	display: grid;
-	margin: 5px;
-	grid-template-rows: 20% 80%;
+	margin: 25px 10px 10px 10px;
+	grid-template-rows: 10%px 80%;
 	align-items: flex-end;
 }
 
