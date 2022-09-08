@@ -1,7 +1,6 @@
 import { normalizeDate } from '../helper/converter';
 
 const RepositoryDetail = ({ data }) => {
-	console.log(data);
 	return (
 		<div className="container">
 			<table>

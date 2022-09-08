@@ -14,7 +14,7 @@ const Search = () => {
 		<div className="search-container">
 			<div className="suggestion-container">
 				<input placeholder="type github username" value={state.query} onChange={sendQuery} className="input"></input>
-				<UserData />
+				{state.query.length > 0 && <UserData />}
 			</div>
 
 			<svg className="svg" xmlns="http://www.w3.org/2000/svg" viewBox="-2.5 -2.5 24 24" width="24" fill="currentColor">

@@ -3,6 +3,7 @@
 	justify-content: center;
 	padding: 0px;
 	cursor: pointer;
+	margin: 20px 0px;
 }
 
 .paginate-container > li {
@@ -15,4 +16,10 @@
 	display: inline-block;
 	background-color: rgb(251, 251, 251);
 	border: 0.5px solid black;
+}
+
+@media screen and (max-width: 480px) {
+	.paginate-container > li > a {
+		padding: 10px;
+	}
 }

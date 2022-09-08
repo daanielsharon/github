@@ -4,7 +4,6 @@
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: flex-start;
-	padding: 5px;
 }
 
 .suggestion-container {
@@ -16,10 +15,11 @@
 .input {
 	flex: 1;
 	border: 1px solid black;
-	padding: 3px;
+	padding: 10px;
 }
 
 .svg {
 	cursor: pointer;
+	padding: 10px;
 	margin-left: 10px;
 }

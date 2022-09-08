@@ -41,6 +41,7 @@ function App() {
 			const response = await http.get(`/users/${state.query}/repos?per_page=${state.limit}&page=${state.page}`);
 			const repoNumber = await http.get(`/users/${state.query}`);
 			const totalPage = Math.ceil(Math.min(30, repoNumber.data.public_repos) / state.limit);
+			console.log(totalPage);
 			setState({ ...state, repository: response.data, totalPage: totalPage });
 		}
 	};
