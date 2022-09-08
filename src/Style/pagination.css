@@ -4,6 +4,7 @@
 	padding: 0px;
 	cursor: pointer;
 	margin: 20px 0px;
+	flex-wrap: wrap;
 }
 
 .paginate-container > li {

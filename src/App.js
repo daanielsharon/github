@@ -40,8 +40,7 @@ function App() {
 		if (!state.fetch) {
 			const response = await http.get(`/users/${state.query}/repos?per_page=${state.limit}&page=${state.page}`);
 			const repoNumber = await http.get(`/users/${state.query}`);
-			// 30 default max number of fetch from github API
-			const totalPage = Math.ceil(Math.min(30, repoNumber.data.public_repos) / state.limit);
+			const totalPage = Math.ceil(repoNumber.data.public_repos / state.limit);
 			setState({ ...state, repository: response.data, totalPage: totalPage });
 		}
 	};

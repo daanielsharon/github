@@ -10,11 +10,12 @@
 	flex-direction: row;
 	align-items: flex-start;
 	margin: 20px 0px;
+	flex-wrap: wrap;
 }
 
 @media screen and (max-width: 480px) {
-	.search-bar {
+	/* .search-bar {
 		flex-direction: column;
 		align-items: stretch;
-	}
+	} */
 }
