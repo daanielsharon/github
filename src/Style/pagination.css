@@ -2,13 +2,13 @@
 	display: flex;
 	justify-content: center;
 	padding: 0px;
-	cursor: pointer;
 	margin: 20px 0px;
 	flex-wrap: wrap;
 }
 
 .paginate-container > li {
 	list-style: none;
+	cursor: pointer;
 }
 
 .paginate-container > li > a {
